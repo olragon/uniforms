@@ -4,7 +4,7 @@ import { connectField } from 'uniforms';
 
 import wrapField from './wrapField';
 
-const Text = props =>
+const Text = ({inputProps, ...props}) =>
   wrapField(
     props,
     <input
@@ -19,7 +19,7 @@ const Text = props =>
       ref={props.inputRef}
       type={props.type}
       value={props.value}
-      {...props.inputProps}
+      {...inputProps}
     />,
   );
 
